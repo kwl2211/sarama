@@ -18,6 +18,7 @@ type ConsumerMessage struct {
 	BlockTimestamp time.Time       // only set if kafka is version 0.10+, outer (compressed) block timestamp
 
 	Key, Value []byte
+	SerdeKey, SerdeValue interface {}
 	Topic      string
 	Partition  int32
 	Offset     int64
